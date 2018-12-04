@@ -1,0 +1,49 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 1bbb4c2fab7d91ba0f52a29c3deb864cc2c98949b0bc05822cd86fe4da8e267b
+
+name:           nanosmos
+version:        0.0.0.0
+description:    Please see the README on GitHub at <https://github.com/NorfairKing/nanosmos#readme>
+homepage:       https://github.com/NorfairKing/nanosmos#readme
+bug-reports:    https://github.com/NorfairKing/nanosmos/issues
+author:         Tom Sydney Kerckhove
+maintainer:     syd@cs-syd.eu
+copyright:      Copyright: (c) 2018 Tom Sydney Kerckhove
+license:        AllRightsReserved
+build-type:     Simple
+cabal-version:  >= 1.10
+
+source-repository head
+  type: git
+  location: https://github.com/NorfairKing/nanosmos
+
+library
+  exposed-modules:
+      NanoSmos
+  other-modules:
+      Paths_nanosmos
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , brick
+    , cursor
+    , directory
+    , text
+    , vty
+  default-language: Haskell2010
+
+executable nanosmos
+  main-is: Main.hs
+  other-modules:
+      Paths_nanosmos
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , nanosmos
+  default-language: Haskell2010

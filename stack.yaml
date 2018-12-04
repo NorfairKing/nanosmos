@@ -1,0 +1,44 @@
+resolver: lts-12.10
+packages:
+- .
+extra-deps:
+- git: https://github.com/NorfairKing/cursor.git
+  commit: 985e8fe0d62a7645aebffda3a486b70ca784b4d9
+  subdirs:
+    - cursor
+    - cursor-gen
+- git: https://github.com/NorfairKing/validity.git
+  commit: b9449de1466abc7c862b7e54b9bb18d6e4a02c81
+  subdirs:
+  - genvalidity
+  - genvalidity-aeson
+  - genvalidity-bytestring
+  - genvalidity-containers
+  - genvalidity-hspec
+  - genvalidity-hspec-aeson
+  - genvalidity-hspec-binary
+  - genvalidity-hspec-cereal
+  - genvalidity-hspec-hashable
+  - genvalidity-hspec-optics
+  - genvalidity-path
+  - genvalidity-property
+  - genvalidity-scientific
+  - genvalidity-text
+  - genvalidity-time
+  - genvalidity-unordered-containers
+  - genvalidity-uuid
+  - genvalidity-vector
+  - validity
+  - validity-aeson
+  - validity-bytestring
+  - validity-containers
+  - validity-path
+  - validity-primitive
+  - validity-scientific
+  - validity-text
+  - validity-time
+  - validity-unordered-containers
+  - validity-uuid
+  - validity-vector
+nix:
+  path: [ "nixpkgs=https://github.com/NixOS/nixpkgs/archive/886871538c15681575925a990a3f1b68ed9d5477.tar.gz" ]
