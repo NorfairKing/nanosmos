@@ -51,8 +51,8 @@ draw tc =
     [ centerLayer $
       border $
       padAll 1 $
-      let (x, y) = textFieldCursorSelection tc
-       in showCursor "cursor" (Location (y, x)) $
+      let (y, x) = textFieldCursorSelection tc
+       in showCursor "cursor" (Location (x, y)) $
           txtWrap (rebuildTextFieldCursor tc)
     ]
 
